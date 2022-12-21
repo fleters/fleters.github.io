@@ -1,12 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/html/ngl">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGL Redirect</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css"
+      integrity="sha512-FA9cIbtlP61W0PRtX36P6CGRy0vZs0C2Uw26Q1cMmj3xwhftftymr0sj8/YeezDnRwL9wtWw8ZwtCiTDXlXGjQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fleter Website</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      padding: 0;
+    }
+    body {
+        display: block;
+        background-color: #333;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    .topnav .title {
+      float: left;
+      cursor: pointer;
+      color: #f2f2f2;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 150%;
+    }
+    .navright {
+      float: right;
+      overflow: hidden;
+      background-color: #333;
+    }
+    .navright button {
+      background-color: #333;
+      border: none;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+      outline: none;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 150%;
+      padding: 15px 16px;
+      transition: 0.3s;
+    }
+    .navright .active {
+      background-color: rgb(240, 240, 240);
+      font-size: 150%;
+      color: black;
+    }
+    .content {
+      display: none;
+      border-top: none;
+    }
+    .content iframe {
+      height: 90vh;
+      width: 100%;
+    }
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <body style="animation: fade ease-out 2s;" onload="openMenu(event, 'main')">
+    <div class="topnav">
+      <a class="title" onclick="openMenu(event, 'main')">Fleter Website</a>
+      <div class="navright">
+        <!-- <button
+          class="opncontent fa-brands fa-instagram"
+          onclick="openMenu(event, 'instagram')"
+        ></button> -->
+        <!-- <a href="#nav">menu</a> -->
+      </div>
+    </div>
+    <div id="main" class="content">
+      <iframe src="/html/ngl/index.html" frameborder="0"></iframe>
+    </div>
+    </div>
+    <script>
+      function openMenu(evt, menuName) {
+        var i, content, opncontent;
+        content = document.getElementsByClassName("content");
+        for (i = 0; i < content.length; i++) {
+          content[i].style.display = "none";
+        }
+        opncontent = document.getElementsByClassName("opncontent");
+        for (i = 0; i < opncontent.length; i++) {
+          opncontent[i].className = opncontent[i].className.replace(
+            " active",
+            ""
+          );
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
 </html>
