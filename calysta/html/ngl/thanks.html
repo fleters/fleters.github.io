@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGL Calysta</title>
+    <style>
+      @import url("/fonts/rubik-light-300.css");
+      @import url("/fonts/rubik-regular-400.css");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .limit {
+        width: 80%;
+        height: 75%;
+        border: 1px solid rgba(0, 0, 0, 0);
+        margin-top: 50px;
+      }
+
+      .card {
+        background: rgba(253, 29, 29, 1);
+        background: -webkit-linear-gradient(
+          to right,
+          rgba(252, 176, 69, 1),
+          rgba(253, 29, 29, 1),
+          rgba(131, 58, 180, 1)
+        );
+        background: linear-gradient(
+          to right,
+          rgba(252, 176, 69, 1),
+          rgba(253, 29, 29, 1),
+          rgba(131, 58, 180, 1)
+        );
+        text-align: center;
+        margin: auto;
+        width: 85%;
+        height: max-content;
+        border: 1px solid gray;
+        overflow: hidden;
+        border-radius: 20px;
+        padding: 5px;
+        box-shadow: 0px 2.5px 15px 7.5px gray;
+      }
+
+      .title {
+        font-family: "RubikRegular";
+        font-size: 25px;
+        color: white;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      p.sub {
+        font-family: "RubikRegular";
+        color: white;
+        margin-top: -5px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 22.5px;
+      }
+      .subtitle {
+        margin-top: 10px;
+        font-size: 15px;
+        color: white;
+        font-family: 'RubikLight';
+        margin-bottom: 5px;
+      }
+
+      .message {
+        width: 60%;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        display: inline-block;
+        border: 1px solid transparent;
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      .message input#user {
+        text-align: center;
+        background: none;
+        outline: none;
+        border: none;
+        font-family: "RubikLight";
+        font-size: 15px;
+        margin-top: 1px;
+        width: 79%;
+      }
+      .message input#message {
+        text-align: center;
+        background: none;
+        outline: none;
+        border: none;
+        width: 100%;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-family: "RubikLight";
+      }
+      .message input:focus::placeholder {
+        color: transparent;
+      }
+
+      form button {
+        visibility: visible;
+        outline: none;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+        color: rgba(0, 0, 0, 0.75);
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      form button:hover {
+        transition: background-color 1s ease-out;
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      form button:focus {
+        transition: all 0.25s ease-out;
+        background-color: rgba(255, 255, 255, 0.75);
+        box-shadow: 0px 0px 7.5px 2.5px black;
+      }
+
+      .footer {
+        font-family: "Arial";
+        margin: auto;
+        margin-top: 10%;
+        text-align: center;
+        border-radius: 15px;
+        width: max-content;
+        height: max-content;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: 1px solid black;
+        background-color: black;
+        color: white;
+      }
+
+      .footer .center {
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="limit">
+      <div class="card">
+        <p class="title">
+          <b>Terima Kasih<br /><p class="sub">Telah Mengirim Pesan Untuk Kami</p></b>
+        </p>
+        <p class="subtitle">
+          <b>Respond mu akan segera terkirim</b>
+        </p>
+      </div>
+      <div class="footer">
+        <b>
+          <a
+            class="center"
+            href="#"
+            onclick="window.open('https://ngl.link/')"
+            row="3"
+            >Inspirated By ngl.link</a
+          >
+          <p>
+            Customized By
+            <a
+              class="center"
+              href="#"
+              onclick="window.open('https://instagram.com/calcal.ys/')"
+              >Calysta</a
+            >
+          </p></b>
+      </div>
+    </div>
+  </body>
+</html>
