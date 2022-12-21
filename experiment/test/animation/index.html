@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+      }
+      div {
+        display: inline-block;
+        width: 100%;
+        animation: fadeInAnimation ease-out 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+      @keyframes fadeInAnimation {
+        0% {
+          transform: translate(-30vh, 0px);
+          opacity: 0;
+        }
+        90% {
+          transform: translate(15px, 0px);
+        }
+        100% {
+          transform: translate(0px, 0px);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>    
+    <h1 style="color: green">Test</h1>
+    <b>Animation Test</b>
+    <p>Made By Fleter</p></div>
+  </body>
+</html>

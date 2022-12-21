@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/fonts/source-code-pro-regular-400.css">
+    <link rel="stylesheet" href="/fonts/lato-regular-400.css">
+    <link rel="stylesheet" href="/fonts/ubuntu-regular-400.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    background-color: #333;
+    height: 100vh;
+}
+.card {
+    background-color: black;
+    height: auto;
+    width: 60%;
+    padding: 5px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 10px rgb(21, 21, 21);
+    overflow: hidden;
+    color: white;
+}
+.card .title {
+    font-size: 40px;
+    font-family: 'UbuntuRegular';
+    margin-bottom: 20px;
+}
+.card .menutitle {
+    font-size: 13px;
+    text-align: left;
+    font-family: 'Source Code Pro Regular';
+    margin-left: 5px;
+}
+.card ul.menu {
+    margin-top: 5px;
+    margin-left: 2.5px;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    align-content: left;
+}
+.card ul.menu li {
+    border:1px solid white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 0.075);
+    margin-left: 4px;
+    margin-top: 3px;
+    display:inline-flex;
+    width: max-content;
+    font-family: 'LatoRegular';
+    cursor: pointer;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card ul.menu li:hover {
+    transition: background-color 0.2s linear;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.card ul.menu li a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.jarak {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 7.5px;
+    margin-bottom: 5px;
+    background-color: grey;
+    height: 1px;
+}
+.card .bottom {
+    margin-bottom: 2.5px;
+}
+</style>
+<body>
+    <div class="card">
+        <p class="title">Welcome Developer</p>
+        <p class="menutitle">CONTENT</p>
+        <ul class="menu">
+            <li><a href="facebook/">Facebook</a></li>
+            <li><a href="instagram/">Instagram</a></li>
+        </ul><br><br>
+        <div class="jarak"></div>
+        <p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" id="waktu"></p>
+        <p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" id="hari"></p>
+        <div class="bottom"></div>
+
+
+
+
+        <script>
+        const currentTime = () => {
+            const el = document.getElementById("waktu");
+            let date = new Date();
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds() + 1;
+            let mi = date.getMilliseconds() / 10 | 0;
+        
+            hh = hh < 10 ? `0${hh}` : hh;
+            mm = mm < 10 ? `0${mm}` : mm;
+            ss = ss < 10 ? `0${ss}` : ss;
+            
+            let time = `${hh}:${mm}:${ss}:${mi}`;
+            el.innerText = time;
+        };
+        currentTime();
+        setInterval(currentTime, 1);
+        
+        const currentDay = () => {
+            const el = document.getElementById("hari");
+            let date = new Date();
+            let mo = date.getMonth();
+            let dd = date.getDay();
+            let yy = date.getFullYear();
+        
+            mo = mo < 10 ? `0${mo}` : mo;
+            dd = dd < 10 ? `0${dd}` : dd;
+            yy = yy < 10 ? `0${yy}` : yy;
+        
+            let day = `${mo}/${dd}/${yy}`;
+            el.innerText = day;
+        };
+        currentDay();
+        </script>
+    </div>
+</body>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/fonts/lato-regular-400.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css"
+      integrity="sha512-FA9cIbtlP61W0PRtX36P6CGRy0vZs0C2Uw26Q1cMmj3xwhftftymr0sj8/YeezDnRwL9wtWw8ZwtCiTDXlXGjQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          height: max-content;
+          color: white;
+          background-attachment: scroll;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+      }
+      /* .opacity {
+          z-index: 1;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.75);
+          background-attachment: scroll;
+      } */
+      .card {
+          z-index: 2;
+          height: max-content;
+          width: 87.5%;
+          background-color: rgba(255, 255, 255, 0.2);
+          box-shadow: -1.5px 1.5px 10px 5px rgba(255, 255, 255, 0.2);
+          border-radius: 15px;
+          overflow: hidden;
+          padding: 20px;
+          margin: auto;
+          margin-top: 6%;
+          margin-bottom: 6%;
+      }
+      .card .top {
+          height: 30px;
+          font-size: 30px;
+          margin-bottom: 20px;
+      }
+      .card .top p.left {
+          float: left;
+      }
+      .card .top span.right {
+          margin-top: -5px;
+          float: right;
+      }
+      .card .top span.right button{
+          cursor: pointer;
+          outline: none;
+          border: 1px solid rgba(255, 255, 255, 0);
+          background-color: rgba(255, 255, 255, 0.15);
+          color: white;
+          font-size: 22.5px;
+          border-radius: 10px;
+          margin-right: -5px;
+          padding-top: 5px;
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-bottom: 5px;
+      }
+      .card .top span.right button:hover{
+          transition: 0.5s all ease-out;
+          background-color: rgba(255, 255, 255, 0.3);
+          border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .limit {
+          height: 3px;
+          border-radius: 10px;
+          background-color: rgba(255, 255, 255, 0.5);
+          margin: auto;
+          width: 80%;
+          margin-top: 0px;
+          margin-bottom: 0px;
+      }
+      .content .cs {
+          color:white;
+          /* font-size: 25px; */
+          font-size: 0px;
+          font-family: 'Courier New', Courier, monospace;
+      }
+      .content div {
+          margin-top: 25px;
+          text-align: left;
+          width: 100%;
+          word-wrap: break-word;
+      }
+      .content div .title {
+          font-size: 40px;
+          margin-bottom: 5px;
+      }
+      .content div .subtitle {
+          margin-left: 20px;
+          font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="top">
+        <p class="left">Fleter Website</p>
+        <span class="right">
+          <button
+            class="fa-brands fa-instagram"
+            onclick="window.open('https://instagram.com/fleterfight', '_blank', 'height=600,width=800')"
+          ></button>
+          <button
+            class="fa-brands fa-facebook-square"
+            onclick="window.open('https://facebook.com/fleters', '_blank', 'height=600,width=800')"
+          ></button>
+          <button
+            class="fa-brands fa-spotify"
+            onclick="window.open('https://open.spotify.com/user/rno1z1lvk712ar0e0dqkw27st', '_blank', 'height=600,width=800')"
+          ></button>
+          <button
+            class="fa-brands fa-twitter-square"
+            onclick="window.open('https://twitter.com/fleterfight', '_blank', 'height=600,width=800')"
+          ></button>
+        </span>
+      </div>
+      <div class="limit"></div>
+      <div class="content">
+        <p class="cs">Incoming Soon</p>
+        <div>
+          <p class="title">About Me</p>
+          <p class="subtitle">Name: Yohanes Samuel W. A.</p>
+          <p class="subtitle">Religion: Catholic</p>
+          <p class="subtitle">Activity: Gabut Thing</p>
+          <p class="subtitle">Birthday: 21 November</p>
+          <p class="subtitle">School: St. Agnes Surabaya</p>
+          <p class="subtitle">Grade: 9 (nine)</p>
+          <p class="subtitle">Ages: 13 (third teen)</p>
+          <p class="subtitle">Sister: A Rachel M D S</p>
+          <p class="subtitle">Love Language: Pyshical Touch</p>
+          <p class="subtitle">Hoby: Coding & Playing some games</p>
+          <p class="subtitle">Favorite Food: Fried Rice</p>
+          <p class="subtitle">Favorite Place: Indonesia, Japan, Chinese</p>
+          <p class="subtitle">
+            Favorite Person: Christoper Alexis Putra Prasetyo
+          </p>
+          <p class="subtitle">Favorite Person: Calysta Audrey Ongkoseputro</p>
+        </div>
+        <div>
+          <p class="title">Games</p>
+          <p class="subtitle">Genshin Impact: ???</p>
+          <p class="subtitle">Mobile Legends: ???</p>
+          <p class="subtitle">Call Of Duty M: ???</p>
+          <p class="subtitle">PUBG: ???</p>
+          <p class="subtitle">Game For Peace: ???</p>
+          <p class="subtitle">Free Fire: ???</p>
+          <p class="subtitle">Roblox: ???</p>
+        </div>
+        <div>
+          <p class="title">Social</p>
+          <p class="subtitle">Email: fleter.fight@gmail.com</p>
+          <p class="subtitle">Pinterest:</p>
+          <p class="subtitle">Facebook:</p>
+          <p class="subtitle">Insagram:</p>
+          <p class="subtitle">Telegram:</p>
+          <p class="subtitle">Twitter:</p>
+          <p class="subtitle">Discord:</p>
+          <p class="subtitle">Tiktok:</p>
+          <p class="subtitle">Reddit:</p>
+          <p class="subtitle">WeChat:</p>
+        </div>
+      </div>
+    </div>
+    <div class="opacity"></div>
+  </body>
+</html>
