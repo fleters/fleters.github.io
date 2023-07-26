@@ -7,18 +7,18 @@ const VINAProject = `${website}/vina-project/`;
 const fleterServerDefault = `${website}/fleter-server/`;
 const fleterServerAppeal = 'https://docs.google.com/forms/d/e/1FAIpQLSesLvV_mjGURT83jy-B7wzbwWRyneOF0RW5-wCQvlkn1dtWtw/viewform?usp=sf_link';
 
+
+
+// the function (please dont edit this if you dont know)
 function defaultPage() {
   window.location.href = website;
 }
-
 function social() {
   window.location.href = pSocial;
 }
-
 function vinaProject() {
   window.location.href = VINAProject;
 }
-
 function fleterServer(page) {
   if (page != null) {
     if (page = 'appeal') {
