@@ -2,9 +2,11 @@
 const website = 'https://fleter.netlify.app';
 
 // Pages of website
+const maintenancePage = `${website}/mt`;
 const pSocial = `${website}/html/social/`;
 const VINAProject = `${website}/vina-project/`;
 const fleterServerDefault = `${website}/fleter-server/`;
+const fleterServerDiscord = 'https://discord.gg/WGmUwbrSCt';
 const fleterServerAppeal = 'https://docs.google.com/forms/d/e/1FAIpQLSesLvV_mjGURT83jy-B7wzbwWRyneOF0RW5-wCQvlkn1dtWtw/viewform?usp=sf_link';
 
 
@@ -23,6 +25,12 @@ function fleterServer(page) {
   if (page != null) {
     if (page = 'appeal') {
       window.location.href = fleterServerAppeal;
+    } else if (page = 'discord') {
+      window.location.href = fleterServerDiscord;
+    } else if (page = 'report-server') {
+      window.location.href = fleterServerDefault;
+    } else if (page = 'report-player') {
+      window.location.href = fleterServerDefault;
     } else {
       window.location.href = fleterServerDefault;
     }
