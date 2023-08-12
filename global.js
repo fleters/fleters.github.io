@@ -23,13 +23,13 @@ function vinaProject() {
 }
 function fleterServer(page) {
   if (page != null) {
-    if (page = 'appeal') {
+    if (page == 'appeal') {
       window.location.href = fleterServerAppeal;
-    } else if (page = 'discord') {
+    } else if (page == 'discord') {
       window.location.href = fleterServerDiscord;
-    } else if (page = 'report-server') {
+    } else if (page == 'report-server') {
       window.location.href = fleterServerDefault;
-    } else if (page = 'report-player') {
+    } else if (page == 'report-player') {
       window.location.href = fleterServerDefault;
     } else {
       window.location.href = fleterServerDefault;
