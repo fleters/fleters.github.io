@@ -2,7 +2,6 @@
 const website = 'https://fleter.netlify.app';
 
 // Pages of website
-const maintenancePage = `${website}/mt`;
 const pSocial = `${website}/html/social/`;
 const VINAProject = `${website}/vina-project/`;
 const fleterServerDefault = `${website}/fleter-server/`;
