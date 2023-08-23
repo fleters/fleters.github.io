@@ -37,3 +37,7 @@ function fleterServer(page) {
     window.location.href = fleterServerDefault;
   }
 }
+
+function discordServer() {
+  window.location.href = fleterServerDiscord;
+}
