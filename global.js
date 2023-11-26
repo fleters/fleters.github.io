@@ -1,3 +1,3 @@
-const origin = "https://fleter.netlify.app";
+const origin = "https://fleter.my.id";
 
 window.location.replace(`${origin}${window.location.pathname}`);
